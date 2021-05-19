@@ -1,0 +1,31 @@
+Laravel 8
+
+route/web
+  // =============================================================>>
+  // // cara pertama atau (Moderen)
+  // // import terlebih dahulu ketika menggunakan controller
+  // use App\Http\Controllers\PagesController;
+
+  // Route::get('/', [PagesController::class, 'home']);
+  // Route::get('/about', [PagesController::class, 'about']);
+  // // ===========================================================>>
+
+  // // Cara tradisional
+  // // Ubah seting di  RouteServiceProvider  dan aktifkan  protected $namespace
+  // Route::get('/', 'PagesController@home');
+  // Route::get('/about', 'PagesController@about');
+
+  // Route::get('/hewan', 'HewanController@index');
+
+Membuat Controller otomatis menggunakan artisan
+  php artisan make:controller NamaController --resource
+  --resource : tambahan jika menggunakan controller dengan mettod defaut CRUD
+
+Membuat Controller dan Model otomatis menggunakan artisan
+  php artisan make:controller NamaController -r -m Namamodel 
+  --resource : tambahan jika menggunakan controller dengan mettod defaut CRUD
+
+Akhir program menambahkan fiture Soft Deleting menggunakan migrasi
+  php artisan make:migration add_soft_delete_to_nama
+  *Jika model dibuat dengan artisan maka migration akan otomatis conek dengan model yang telah dibuat
+  
