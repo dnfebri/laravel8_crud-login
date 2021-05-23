@@ -56,3 +56,10 @@ Route::delete('/hewan/{id}', 'HewanController@destroy');
 // Route::patch('/animals/{animal}', 'AnimalsController@update');
 // OR ==>
 Route::resource('animals', 'AnimalsController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('password.edit');
+Route::patch('/change-password', 'Auth\ChangePasswordController@update')->name('password.edit');

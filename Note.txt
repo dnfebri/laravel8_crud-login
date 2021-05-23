@@ -1,4 +1,4 @@
-Laravel 8
+# Laravel 8
 
 route/web
   // =============================================================>>
@@ -19,13 +19,16 @@ route/web
 
 Membuat Controller otomatis menggunakan artisan
   php artisan make:controller NamaController --resource
-  --resource : tambahan jika menggunakan controller dengan mettod defaut CRUD
+  --resource : tambahan jika menggunakan controller dengan mettod default CRUD
 
 Membuat Controller dan Model otomatis menggunakan artisan
   php artisan make:controller NamaController -r -m Namamodel 
-  --resource : tambahan jika menggunakan controller dengan mettod defaut CRUD
+  --resource : tambahan jika menggunakan controller dengan mettod default CRUD
 
 Akhir program menambahkan fiture Soft Deleting menggunakan migrasi
   php artisan make:migration add_soft_delete_to_nama
   *Jika model dibuat dengan artisan maka migration akan otomatis conek dengan model yang telah dibuat
   
+Mengintal Laravel/ui dikarenekan di versi 8 sudah tidak disedikan secara default
+  composer require laravel/ui
+  php artisan ui bootstrap --auth
