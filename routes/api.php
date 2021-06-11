@@ -20,5 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/hewan', [HewanController::class, 'index']);
-Route::post('/hewan/store', [HewanController::class, 'store']);
+Route::get('/hewan', [HewanController::class, 'index']);
+Route::post('/hewan', [HewanController::class, 'store']);
+Route::get('/hewan/{id}', [HewanController::class, 'show']);
+Route::put('/hewan/{id}', [HewanController::class, 'update']);
+Route::delete('/hewan/{id}/delete', [HewanController::class, 'destroy']);
+
+// Route::resource('hewan', HewanController::class);
